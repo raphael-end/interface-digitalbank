@@ -1,0 +1,135 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="primary">
+    <ion-title>
+      <img src="../../assets/logo.png">
+
+      <span>Raphael</span>
+
+      <ion-button (click)="toggleBlocks()" color="light" fill="clear" size="small">
+        <ion-icon slot="icon-only" [name]="initialstep > 0 ? 'arrow-up-outline' : 'arrow-down-outline'"></ion-icon>
+      </ion-button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-no-padding" color="primary">
+  <div #background class="backdroung opacity-transition">
+    <div class="back-information ion-text-center">
+        <img class="qrcode" src="../../assets/QR_CODE.png">
+
+        <span>Banco <strong>000- Brotas Pagamentos</strong></span>
+        <span>Agência <strong>0000</strong></span>
+        <span>Conta <strong>00000000-0</strong></span>
+      </div>
+      <!--
+      <ion-list lines="full">
+          <ion-item *ngFor="let item of itens" detail>
+              <ion-icon slot="start" [name]="item.icon"></ion-icon>
+              <ion-label>{{ item.text }}</ion-label>
+          </ion-item>
+      </ion-list>
+      -->
+  <!--help-->    
+  <ion-list lines="full">
+      <ion-item (click)="showmodal()" detail>
+          <ion-icon slot="start" name="help-circle-outline"></ion-icon>
+          <ion-label> Me Ajuda </ion-label>
+      </ion-item>
+  </ion-list>
+  <!--help-->  
+  <!-- Perfil -->  
+  <ion-list lines="">
+    <ion-item (click)="showmodalperfil()" detail>
+      <ion-icon slot="start" name="person-outline"></ion-icon>
+      <ion-label> Perfil </ion-label>
+    </ion-item>
+  </ion-list>
+  <!-- Perfil --> 
+  <!-- Configurar o cartão --> 
+  <ion-list lines="full">
+    <ion-item detail>
+        <ion-icon slot="start" (click)="showmodalcadcard()" name="card-outline"></ion-icon>
+        <ion-label> Configurar cartão </ion-label>
+    </ion-item>
+  </ion-list>
+  <!-- Configurar o cartão --> 
+  </div>
+  <ion-button class="logout" (click)="showmodal()" color="light" expand="block" fill="outline">
+    SAIR DA CONTA
+  </ion-button>
+  <div #blocks [ngClass]="fixedBlocks() ? 'fixed' : null" class="blocks">
+    <ion-card>
+      <ion-item #swipeDown class="ion-margin-vertical" lines="none">
+        <ion-icon slot="start" name="cash-outline"></ion-icon>
+        <ion-label>Conta</ion-label>
+      </ion-item>
+      <ion-card-content class="ion-no-padding">
+        <div class="ion-padding ion-margin-vetical cash">
+          <span class="blue">Saldo disponível</span>
+          <span class="blue value">R$ 60,00</span>
+        </div>
+
+        <div class="ion-padding-vertical footer">
+          <ion-item color="light" lines="none" detail>
+            <ion-icon slot="start" name="barcode-outline"></ion-icon>
+            <ion-label class="ion-text-wrap">Boleto de R$ 50,00 pago</ion-label>
+          </ion-item>
+        </div>
+      </ion-card-content>
+  </ion-card>
+    <ion-card>
+        <ion-item class="ion-margin-vertical" lines="none">
+          <ion-icon slot="start" name="card-outline"></ion-icon>
+          <ion-label>Cartão virtual</ion-label>
+        </ion-item>
+        <ion-card-content class="ion-no-padding">
+          <div class="ion-padding ion-margin-vetical cash">
+            <span class="blue">Fatura atual</span>
+            <span class="blue value">R$ 60,00</span>
+            <span>Limite disponível≈<span class="green">R$ 2000,00</span></span>
+          </div>
+
+          <div class="ion-padding-vertical footer">
+            <ion-item color="light" lines="none" detail>
+              <ion-icon slot="start" name="cash-outline"></ion-icon>
+              <ion-label class="ion-text-wrap">Transferência mais recente para Leandro Souza no valor de R$60,00</ion-label>
+            </ion-item>
+          </div>
+        </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+<ion-footer [ngClass]="initialstep > 0 ?'hidden' : null" class="ion-no-border">
+  <ion-toolbar color="primary">
+    <!--
+    <ion-slides class="opacity-transition" [options]="slidesOptions">
+      <ion-slide *ngFor="let option of options">
+        <div class="container ion-text-left">
+          <ion-icon [name]="option.icon"></ion-icon>
+          <span>{{ option.text }}</span>
+        </div>
+      </ion-slide>
+    </ion-slides>
+    -->
+    <ion-slides class="opacity-transition" [options]="slidesOptions">
+      <ion-slide>
+        <div class="container ion-text-left" (click)="showmodalclient()">
+          <ion-icon name="person-add-outline"></ion-icon>
+          <span>Clientes</span>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="container ion-text-left" (click)="showmodaltrans()">
+          <ion-icon name="cash-outline"></ion-icon>
+          <span>Transferir</span>
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="container ion-text-left" >
+          <ion-icon name="person-add-outline"></ion-icon>
+          <span>teste2</span>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </ion-toolbar>
+</ion-footer>

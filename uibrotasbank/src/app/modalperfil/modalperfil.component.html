@@ -1,0 +1,44 @@
+<!-- fab placed to the top end -->
+<ion-fab vertical="top" slot="fixed">
+  <ion-fab-button>
+    <ion-icon (click)="close()" name="close-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+<ion-header > 
+  <div class="block-sup">
+  </div>
+  <ion-toolbar >
+    <ion-title>
+      <img src="../../assets/icon/logo.png">
+      <span class="ion-text-wrap">PERFIL</span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="logm">
+    <ion-slides>
+      <ion-slide>
+        <div class="slide-inner ion-padding">
+          <span class="sp">  Nome </span>
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="text" placeholder="Raphael" ></ion-input>
+          </ion-item>
+          <br>
+        <span class="sp"> CPF/CNPJ</span>
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="text" placeholder="130.640.826-12" ></ion-input>
+          </ion-item>
+          <br>
+        <span class="sp">E-mail</span>
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="email" placeholder="raphaelmourateixeira@gmail.com" ></ion-input>
+          </ion-item>
+          <ion-button class="ion-margin-top"  color="light" expand="block">
+           Atualizar
+          </ion-button>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

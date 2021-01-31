@@ -1,0 +1,25 @@
+<!-- fab placed to the top end -->
+<ion-fab vertical="top" slot="fixed">
+  <ion-fab-button>
+    <ion-icon (click)="close()" name="close-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+<ion-header > 
+  <div class="block-sup">
+  </div>
+  <ion-toolbar >
+    <ion-title>
+      <img src="../../assets/icon/logo.png">
+      <span class="ion-text-wrap">Transferir</span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+        <div class="conteiner" color="primary-contrast">
+          <ion-button expand="full" fill="clear" (click)="showmodaltransbtb()">Brotas Bank para Brotas Bank</ion-button>
+        </div>
+        <div class="conteiner2" color="primary-contrast">
+          <ion-button expand="full" fill="clear" (click)="showmodaltransbtother()">Para outro banco</ion-button>
+        </div>
+</ion-content>

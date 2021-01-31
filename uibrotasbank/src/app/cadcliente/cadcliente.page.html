@@ -1,0 +1,70 @@
+<!-- fab placed to the top end -->
+<ion-fab vertical="top" slot="fixed">
+  <ion-fab-button>
+    <ion-icon (click)="close()" name="close-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+<ion-header class="ion-no-border"> 
+  <ion-toolbar color="primary">
+    <ion-title>
+      <img src="../../assets/logo.png">
+      <span class="ion-text-wrap">Novo Cliente</span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  color="primary">
+  <div class="logm">
+    <ion-slides>
+      <ion-slide>
+        <div class="slide-inner ion-padding">
+
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="text" placeholder="Nome" ></ion-input>
+          </ion-item>
+
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="text" placeholder="CPF/CNPJ" ></ion-input>
+          </ion-item>
+
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="email" placeholder="E-mail" ></ion-input>
+          </ion-item>
+
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="text" placeholder="Telefone-Fixo" ></ion-input>
+          </ion-item>
+          
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="text" placeholder="Telefone" ></ion-input>
+          </ion-item>
+          
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="text" placeholder="CEP" ></ion-input>
+          </ion-item>
+
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="text" placeholder="Endereço" ></ion-input>
+          </ion-item>
+
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="text" placeholder="Número" ></ion-input>
+          </ion-item>
+          
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="text" placeholder="Complemento" ></ion-input>
+          </ion-item>
+
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="text" placeholder="Bairro" ></ion-input>
+          </ion-item>
+          
+          <ion-button class="ion-margin-top"  color="light" expand="block">
+            Cadastrar
+          </ion-button>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+</ion-content>

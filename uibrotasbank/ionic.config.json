@@ -1,0 +1,7 @@
+{
+  "name": "uibrotasbank",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

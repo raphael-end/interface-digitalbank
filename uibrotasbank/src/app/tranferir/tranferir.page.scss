@@ -1,0 +1,33 @@
+ion-header{
+    ion-toolbar{
+      --min-height: 80px;
+      ion-title{
+        align-items: flex-end;
+        img{
+          width: 45px;
+          vertical-align: middle;
+          margin-right: 10px;
+        }
+        span{
+          font-size: 22px;
+          justify-content: center;
+        }
+      }
+    }
+}
+
+ion-content{
+    .conteiner{
+        margin-top: 100px;
+    }
+    .conteiner2{
+        margin-top: 20px;
+    }
+    ion-button{
+       background-color: var(--ion-color-primary-contrast); 
+       border-radius: 50px;
+       height: 55px;
+       box-shadow: 1px 8px 8px 0px rgba(0,0,0,0.08);
+       --heighlight-height: 0px; 
+    }
+}

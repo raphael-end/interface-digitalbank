@@ -1,0 +1,31 @@
+ion-header{
+    ion-toolbar{
+      --min-height: 80px;
+      ion-title{
+        align-items: flex-end;
+        padding-bottom: 20px;
+        img{
+          width: 45px;
+          vertical-align: middle;
+          margin-right: 10px;
+        }
+        span{
+          color: #a0a0a0;
+          font-size: 22px;
+        }
+        ion-button{
+          display: block;
+        }
+      }
+    }
+}
+
+ion-content{
+  .blocks{
+    padding: 150px 50px 150px 50px;
+  }
+  span{
+    font-size: 27px;
+    color: #a0a0a0;
+  }
+}

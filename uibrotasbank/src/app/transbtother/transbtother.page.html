@@ -1,0 +1,76 @@
+<!-- fab placed to the top end -->
+<ion-fab vertical="top" slot="fixed">
+  <ion-fab-button>
+    <ion-icon (click)="close()" name="close-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+<ion-header class="ion-no-border"> 
+  <ion-toolbar color="primary">
+    <ion-title>
+      <img src="../../assets/logo.png">
+      <span class="ion-text-wrap">Transferir</span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="primary">
+  <div class="blocks">
+    <ion-card>
+      <ion-item #swipeDown class="ion-margin-vertical" lines="none">
+        <ion-icon slot="start" name="cash-outline"></ion-icon>
+        <ion-label>Transferência para outro banco</ion-label>
+      </ion-item>
+      <ion-card-content class="ion-no-padding">
+        <div class="ion-padding ion-margin-vetical cash">
+          <span class="blue">A taxa de transferencia é de 10%</span>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-content class="ion-no-padding">
+        <div class="ion-padding ion-margin-vetical cash">
+          <div class="logm">
+            <ion-slides>
+              <ion-slide>
+                <div class="slide-inner ion-padding">
+        
+                  <ion-item class="ion-margin-top" lines="none">
+                    <ion-input type="text" placeholder="Número da conta" ></ion-input>
+                  </ion-item>
+
+                  <ion-item class="ion-margin-top" lines="none">
+                    <ion-input type="text" placeholder="Digito da conta" ></ion-input>
+                  </ion-item>
+
+                  <ion-item class="ion-margin-top" lines="none">
+                    <ion-input type="text" placeholder="Codigo do banco" ></ion-input>
+                  </ion-item>
+                  
+                  <ion-item class="ion-margin-top" lines="none">
+                    <ion-input type="text" placeholder="Agência" ></ion-input>
+                  </ion-item>
+
+                  <ion-item class="ion-margin-top" lines="none">
+                    <ion-input type="text" placeholder="Titular da conta" ></ion-input>
+                  </ion-item>
+
+                  <ion-item class="ion-margin-top" lines="none">
+                    <ion-input type="text" placeholder="CPF/CNPJ" ></ion-input>
+                  </ion-item>
+        
+                  <ion-item class="ion-margin-top" lines="none">
+                    <ion-input type="text" placeholder="Quantidade" ></ion-input>
+                  </ion-item>
+
+                  <ion-button class="ion-margin-top"  color="light" expand="block">
+                    Transferir
+                  </ion-button>
+                </div>
+              </ion-slide>
+            </ion-slides>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
